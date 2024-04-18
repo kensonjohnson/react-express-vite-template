@@ -1,0 +1,30 @@
+// Created using this resource:
+// https://www.totaltypescript.com/tsconfig-cheat-sheet
+
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Transpiling with TypeScript: */
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "outDir": "build",
+    "sourceMap": true,
+
+    /* This code doesn't run in the DOM: */
+    "lib": ["es2022"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.spec.ts"]
+}
