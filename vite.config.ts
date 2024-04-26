@@ -1,11 +1,14 @@
 import { defineConfig } from "vite";
+import { join } from "node:path";
+import { cwd } from "node:process";
 import react from "@vitejs/plugin-react";
 
 // Read about the Vite config here: https://vitejs.dev/config/
 export default defineConfig({
   root: "frontend",
   build: {
-    outDir: "build/frontend",
+    outDir: join(cwd(), "build/frontend"),
+    emptyOutDir: true,
   },
   plugins: [react()],
   server: {
